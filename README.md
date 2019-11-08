@@ -1,33 +1,50 @@
-## vscode-js-console-utils
+# Welcome to your first VS Code Extension
 
-Easily insert and remove console.log statements, by [@whtouche](https://twitter.com/whtouche)
+## What's in the folder
 
-![](https://i.imgur.com/0tiesd2.gif)
+- This folder contains all of the files necessary for your extension
+- `package.json` - this is the manifest file in which you declare your extension and command.
+  The sample plugin registers a command and defines its title and command name. With this information
+  VS Code can show the command in the command palette. It doesn’t yet need to load the plugin.
+- `extension.js` - this is the main file where you will provide the implementation of your command.
+  The file exports one function, `activate`, which is called the very first time your extension is
+  activated (in this case by executing the command). Inside the `activate` function we call `registerCommand`.
+  We pass the function containing the implementation of the command as the second parameter to
+  `registerCommand`.
 
-## Installing
+## Get up and running straight away
 
-This extension is available for free in the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=whtouche.vscode-js-console-utils)
+- press `F5` to open a new window with your extension loaded
+- run your command from the command palette by pressing (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac) and typing `Hello World`
+- set breakpoints in your code inside extension.ts to debug your extension
+- find output from your extension in the debug console
 
-## Usage
+## Make changes
 
-With selection:
-* Highlight a variable (or really any text)
-* Press Cmd+Shift+L
-* The output (on a new line) will be: console.log('variable: ', variable);
+- you can relaunch the extension from the debug toolbar after changing code in `extension.js`
+- you can also reload (`Ctrl+R` or `Cmd+R` on Mac) the VS Code window with your extension to load your changes
 
-Without selection:
-* Press Cmd+Shift+L
-* The output (on the same line) will be: console.log();
+## Explore the API
 
-To remove console.logs:
-* Press Cmd+Shift+D
-* This will delete all console.log statements in the current document
+- you can open the full set of our API when you open the file `node_modules/vscode/vscode.d.ts`
 
-## To Do
-* Add support for other console.* methods (warn, error, time, timeEnd, etc)
-* Add ability to delete console.* across project (currently just the open file)
-* ~~When deleting console.*, report how many were deleted~~, across how many files
-* Allow configuration to only delete certain types of console.* statements
+## Run tests
 
-## License
-[MIT License](LICENSE)
+- open the debug viewlet (`Ctrl+Shift+D` or `Cmd+Shift+D` on Mac) and from the launch configuration dropdown pick `Launch Tests`
+- press `F5` to run the tests in a new window with your extension loaded
+- see the output of the test result in the debug console
+- make changes to `test/extension.test.js` or create new test files inside the `test` folder
+  - by convention, the test runner will only consider files matching the name pattern `**.test.js`
+  - you can create folders inside the `test` folder to structure your tests any way you want
+
+## Package
+
+```bash
+    npm install vsce -g  // package tools
+
+    vsce pageage // generate .vsix package
+```
+
+## Modify shortcut key
+
+- package.json => keybindings
