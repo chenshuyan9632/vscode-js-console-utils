@@ -39,6 +39,8 @@
 
 ## Package
 
+- [vsce - Publishing Tool Reference](https://jeasonstudio.gitbooks.io/vscode-cn-doc/content/md/%E5%B7%A5%E5%85%B7/vse%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7.html)
+
 ```bash
     npm install vsce -g  // package tools
 
